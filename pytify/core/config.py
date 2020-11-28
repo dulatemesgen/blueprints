@@ -1,5 +1,5 @@
 import os
-import YAML
+import yaml
 from collections import namedtuple
 
 from pytify.auth import AuthMethod
@@ -20,7 +20,7 @@ def read_config():
 
     try:
         with open(file_path, mode='r', encoding='UTF-8') as file:
-            config = YAML.load(file)
+            config = yaml.load(file)
 
             config['base_url'] = f'{config["api_url"]}/{config["api_version"]}'
 
