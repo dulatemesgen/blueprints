@@ -14,6 +14,7 @@ Config = namedtuple('Config', ['client_id',
                                'base_url',
                                'auth_method', ])
 
+
 def read_config():
     current_dir = os.path.abspath(os.curdir)
     file_path = os.path.join(current_dir, 'config.yaml')
